@@ -4,13 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-    <header></header>
+    <header>
+        <form id="search-form">
+            <input id="search-input" type="search">
+            <button>Buscar</button>
+        </form>
+        <select id="category-select">
+            <option value="">Todas las categorías</option>
+        </select>
+    </header>
     <main>
-
+        <div id="status-message"></div>
+        <form id="create-product-form">
+            <input id="product-title" type="text" placeholder="Titulo">
+            <input id="product-price" type="number" placeholder="Precio">
+            <input id="product-category" type="text" placeholder="Categoria">
+            <input id="product-description" type="text" placeholder="Descripcion">
+            <button type="submit">Crear producto</button>
+        </form>
+        <section id="products-container"></section>
+        <aside>
+            <span id="cart-count">0</span>
+            <button id="send-cart-btn">Enviar carrito</button>
+        </aside>
     </main>
     <footer></footer>
-    <script src="script.js" defer></script>
+    <script src="script.js" type="module" defer></script>
 </body>
 </html>
