@@ -6,8 +6,8 @@ async function getCategories(params) {
     return await fetchJson(DUMMY_BASE_URL+"/products/categories");
 }
 
-async function getListProducts() {
-    return await fetchJson(DUMMY_BASE_URL+"/products?limit=10&skip=0");
+async function getListProducts(limit = 10, skip = 0) {
+    return await fetchJson(`${DUMMY_BASE_URL}/products?limit=${limit}&skip=${skip}`);
 }
 
 async function getProduct(product) {
